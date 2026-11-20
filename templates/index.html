@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digit Guesser</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+    <h1>Digit Guesser</h1>
+    <p class="hint">Draw a single digit (0–9) in the square, then click Guess.</p>
+
+    <canvas id="pad" width="280" height="280" aria-label="Drawing area"></canvas>
+
+    <div class="buttons">
+      <button id="guess" class="primary">Guess</button>
+      <button id="clear">Clear</button>
+    </div>
+
+    <div id="result" aria-live="polite"></div>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
